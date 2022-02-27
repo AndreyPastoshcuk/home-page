@@ -1,0 +1,14 @@
+@media screen and (max-width: 1919px) {
+  .clients .container {
+    max-width: fit-content;
+    margin: 0;
+    padding: 0;
+  }
+
+  .clients-item--hillel,
+  .clients-item--3dlook,
+  .clients-item--ingratek,
+  .clients-item--ultimatecard {
+    border-radius: 0;
+  }
+}
