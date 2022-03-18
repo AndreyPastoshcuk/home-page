@@ -266,7 +266,8 @@
   color: #fff;
 }
 
-.expirience__item {
+.expirience__item a {
+  text-decoration: none;
   font-weight: bold;
   font-size: clamp(30px, calc(38 / 1600 * 100vw), 38px);
   line-height: 37px;
@@ -274,7 +275,11 @@
   white-space: nowrap;
 }
 
-.expirience__item--active {
+.expirience__item a:hover {
+  color: #f0145a;
+}
+
+.expirience__item--active a {
   color: transparent;
   background-image: linear-gradient(90.13deg, #ef8080 0.84%, #f0145a 99.96%);
   -webkit-background-clip: text;
@@ -359,7 +364,7 @@
   font-size: clamp(18px, calc(24 / 1360 * 100vw), 24px);
   line-height: clamp(21px, calc(28 / 1360 * 100vw), 28px);
   color: #24a3ff;
-  font-weight: 500;
+  font-weight: 700;
 }
 
 .services-card .card-text {
@@ -367,6 +372,7 @@
   font-size: clamp(16px, calc(18 / 1360 * 100vw), 18px);
   line-height: clamp(22px, calc(26 / 1360 * 100vw), 26px);
   color: #ffffff;
+  font-weight: 400;
 }
 
 /* Team */
@@ -603,6 +609,18 @@ p {
   color: #f0145a;
 }
 
+.recomendet__card-subtitle a {
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 20px;
+  color: #24a3ff;
+}
+
+.recomendet__card-subtitle a:hover {
+  color: #f0145a;
+}
+
 .recomendet__list {
   background-color: #f5f5fa;
   margin: 0;
@@ -630,9 +648,6 @@ p {
 
 .recomendet__card-subtitle {
   padding-top: 30px;
-  font-size: 16px;
-  line-height: 20px;
-  color: #24a3ff;
 }
 
 .recomendet__cart-date {
@@ -749,12 +764,9 @@ p {
 }
 
 .footer-mail-link:hover,
-.footer-address-link:hover {
-  border-bottom: 1px solid #24a3ff;
-}
-
+.footer-address-link:hover,
 .footer-phone-number:hover {
-  border-bottom: 1px solid #46466e;
+  color: #f0145a;
 }
 
 .copyright {
