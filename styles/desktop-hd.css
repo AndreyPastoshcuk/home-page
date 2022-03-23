@@ -378,37 +378,44 @@
 /* Team */
 
 .team {
-  margin-top: 80px;
-  padding: 30px 0;
+  padding: 60px 0 30px;
 }
 
-.team-card {
+.team-card__trigger {
+  display: none;
+}
+
+.cards-wrapper {
+  overflow-x: hidden;
+}
+
+.team-cards {
   display: flex;
-  min-height: 298px;
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+  transition: transform 0.5s ease-out;
+}
+
+#team-1:checked ~ .cards-wrapper .team-cards {
+  transform: translateX(0%);
+}
+
+#team-2:checked ~ .cards-wrapper .team-cards {
+  transform: translateX(-100%);
+}
+
+#team-3:checked ~ .cards-wrapper .team-cards {
+  transform: translateX(-200%);
+}
+
+.team__card {
+  display: flex;
+  flex-shrink: 0;
+  flex-basis: 100%;
+  flex-direction: row;
   border-radius: 12px;
   overflow: hidden;
-}
-
-.team-card__image {
-  flex-grow: 1;
-  flex-basis: 400px;
-  position: relative;
-}
-
-.team-card__image img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.team-card__text {
-  flex-grow: 1;
-  flex-basis: 1200px;
-  padding: 30px;
-  background-color: #f5f5fa;
 }
 
 .team-card__descr {
@@ -424,6 +431,31 @@
   color: inherit;
 }
 
+.team-card__image {
+  flex-shrink: 0;
+  flex-basis: 400px;
+  position: relative;
+}
+
+.team-card__image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.team-card__text {
+  padding: 30px;
+  background-color: #f5f5fa;
+}
+
+.team-card__slogan {
+  margin: 5px 0 0;
+}
+
 .team-card__person {
   margin: 30px 0 0;
   font-size: 16px;
@@ -432,36 +464,41 @@
 }
 
 .team-card__rank {
-  display: block;
-  margin-top: 6px;
+  margin: 6px 0 0;
   font-size: 14px;
   line-height: 22px;
   color: #b3b3ba;
 }
 
-.dots {
-  margin-top: 30px;
+.card-switchers {
   display: flex;
   justify-content: center;
-  align-items: center;
   gap: 15px;
+  margin: 30px 0 0;
+  padding-left: 0;
+  list-style: none;
 }
 
-.dot {
+.card__switcher {
+  display: block;
   width: 16px;
   height: 16px;
   border-radius: 50%;
   background-color: rgba(36, 163, 255, 0.2);
+  cursor: pointer;
 }
 
-.dot-active {
-  background-color: #24a3ff;
+#team-1:checked ~ .card-switchers li:nth-child(1) .card__switcher,
+#team-2:checked ~ .card-switchers li:nth-child(2) .card__switcher,
+#team-3:checked ~ .card-switchers li:nth-child(3) .card__switcher,
+.card__switcher:hover {
+  background-color: rgba(36, 163, 255, 1);
 }
 
 /* Clients */
 
 .clients {
-  margin-top: 60px;
+  margin-top: 30px;
 }
 
 .clients_wrapp {

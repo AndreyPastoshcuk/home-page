@@ -9,7 +9,7 @@
   }
 
   .header {
-    display: inline-block;
+    display: block;
     padding-top: 0;
   }
 
@@ -123,6 +123,14 @@
 
   .clients-item {
     flex-basis: 100%;
+  }
+
+  .team {
+    padding: 60px 0 30px;
+  }
+
+  .team-cards {
+    transition: transform 0.3s ease-out;
   }
 
   .team-card__text {

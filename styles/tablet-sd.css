@@ -71,13 +71,16 @@
     flex-basis: calc(100% / 3);
   }
 
-  .team-card {
+  .team__card {
     flex-direction: column;
-    flex-wrap: wrap;
+  }
+
+  .team-cards {
+    transition: transform 0.4s ease-out;
   }
 
   .team-card__image {
-    min-height: 500px;
+    flex-basis: 500px;
   }
 
   .team-card__text {
